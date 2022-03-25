@@ -29,6 +29,8 @@ body{
     padding: 0;
 }
 
+
+/*header*/
 .logo{
     color: #dc3daa;
     font-family: 'SourceSerifPro-SemiBoldItalic';
@@ -104,7 +106,9 @@ body{
 .search-icon{
     position: absolute;
     top: 0.5rem;
-    right: -1rem;
+    right: -0.5rem;
     width: 2.9rem;
 }
 /*serch bar*/
+
+/*header*/
