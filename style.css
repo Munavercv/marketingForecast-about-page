@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'SourceSerifPro-Regular';
+    src: url(Fonts/SourceSerifPro-Regular.ttf);
+}
+@font-face {
+    font-family: 'SourceSerifPro-SemiBold';
+    src: url(Fonts/SourceSerifPro-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'SourceSerifPro-SemiBoldItalic';
+    src: url(Fonts/SourceSerifPro-SemiBoldItalic.ttf);
+}
+@font-face {
+    font-family: 'LightItalic';
+    src: url(Fonts/SourceSerifPro-LightItalic.ttf);
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.main-body {
+    background-image: linear-gradient(to bottom right, #200554, #3d065f 70%, #45108a);
+    height: 44rem;
+    margin: 0;
+    padding: 0;
+}
+
+.logo{
+    color: #dc3daa;
+    font-family: 'SourceSerifPro-SemiBoldItalic';
+    font-size: 1.7rem;
+    margin-left: 2rem;
+    padding-top: 1.08rem;
+}
+
+.nav-div{
+    margin-left: -2rem;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+}
+
+.nav-link{
+    position: relative;
+    text-decoration: none;
+    font-family: 'LightItalic';
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    padding: 0 10px;
+    margin-top: 0.7rem;
+}
+
+/*nav link hover anime*/
+.nav-link::after{
+    content: '';
+    position: absolute;
+    background-color: #dc3daa;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    transition: 0.1s;
+}
+.nav-link:hover{
+    color: white !important;
+    transition: 0.1s ease;
+}
+.nav-link:hover::after{
+    width: 100%;
+}
+/*nav link hover anime*/
+
+.nav-div-2{
+    padding-left: 8rem;
+    padding-top: 0.5rem;
+}
+.nav-div-2 a{
+    font-family: 'LightItalic';
+    font-size: 0.9rem;
+    margin-left: 1rem;
+}
+
+/*serch bar*/
+.search-bar{
+    display: none;
+    width: 11.5rem;
+    height: 1.7rem;
+    border: none;
+    border-radius: 20px 0px 0px 20px;
+    margin-right: 0.8rem;
+    padding-left: 1rem;
+    font-family: 'LightItalic';
+}
+.search-bar:focus{
+    border: #dc3daa;
+}
+.search-bar::placeholder{
+    font-family: 'LightItalic';
+    font-size: 18px;
+}
+.search-icon{
+    position: absolute;
+    top: 0.5rem;
+    right: -1rem;
+    width: 2.9rem;
+}
+/*serch bar*/
