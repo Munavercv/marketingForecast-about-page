@@ -14,6 +14,14 @@
     font-family: 'LightItalic';
     src: url(Fonts/SourceSerifPro-LightItalic.ttf);
 }
+@font-face {
+    font-family: 'Light';
+    src: url(Fonts/SourceSerifPro-Light.ttf);
+}
+
+:root{
+    --primaryColor:#dc3daa;
+}
 
 
 body{
@@ -22,7 +30,7 @@ body{
     overflow-x: hidden;
 }
 
-.main-body {
+body {
     background-image: linear-gradient(to bottom right, #200554, #3d065f 70%, #45108a);
     height: 44rem;
     margin: 0;
@@ -32,7 +40,7 @@ body{
 
 /*header*/
 .logo{
-    color: #dc3daa;
+    color: var(--primaryColor);
     font-family: 'SourceSerifPro-SemiBoldItalic';
     font-size: 1.7rem;
     margin-left: 2rem;
@@ -59,19 +67,21 @@ body{
 .nav-link::after{
     content: '';
     position: absolute;
-    background-color: #dc3daa;
+    background-color: var(--primaryColor);
     height: 3px;
     width: 0;
     left: 0;
     bottom: -5px;
     transition: 0.1s;
 }
+/* .nav-link:focus::after, */
+.nav-link:hover::after{
+    width: 100%;
+}
+
 .nav-link:hover{
     color: white !important;
     transition: 0.1s ease;
-}
-.nav-link:hover::after{
-    width: 100%;
 }
 /*nav link hover anime*/
 
@@ -97,7 +107,7 @@ body{
     font-family: 'LightItalic';
 }
 .search-bar:focus{
-    border: #dc3daa;
+    border: var(--primaryColor);
 }
 .search-bar::placeholder{
     font-family: 'LightItalic';
@@ -112,3 +122,57 @@ body{
 /*serch bar*/
 
 /*header*/
+
+/*section/*
+
+/*about text*/
+.about-msg{
+    padding-left: 2.4rem;
+    padding-top: 10rem;
+}
+.title{
+    letter-spacing: 1px;
+    font-family: 'SourceSerifPro-Regular';
+    color: white;
+}
+.para{
+    font-family: 'Light';
+    color: #c7bcd6;
+    line-height: 28px;
+}
+
+.button{
+    font-family: 'LightItalic';
+    color: white;
+    font-size: 0.9rem;
+}
+.btn-1{
+    width: 10.44rem;
+    height: 1.8rem;
+    background: var(--primaryColor);
+    border: none;
+    border-radius: 20px;
+}
+.btn-2{
+    width: 10.44rem;
+    height: 1.8rem;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    background: none;
+    border: 2px solid var(--primaryColor);
+    border-radius: 20px;
+}
+.button:hover{
+    box-shadow: 0px 0px 20px 0px var(--primaryColor);
+    transition: 500ms ease-in-out;
+}
+/*about text*/
+/*image*/
+.img-1 {
+    position: relative;
+    margin-top: 1rem;
+    max-width: 46rem;
+}
+/*image*/
+
+/*section/*

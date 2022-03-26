@@ -4,3 +4,4 @@ $(document).ready(function(){
         $("#search-bar").animate({width :'toggle'})
     }) 
 })
+/* serch bar animation */
