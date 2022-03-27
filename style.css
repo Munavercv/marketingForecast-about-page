@@ -30,13 +30,41 @@ body{
     overflow-x: hidden;
 }
 
-body {
+.main-body {
     background-image: linear-gradient(to bottom right, #200554, #3d065f 70%, #45108a);
-    height: 44rem;
+    height: 100vh;
     margin: 0;
     padding: 0;
 }
 
+/* loader */
+.loaderelement{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.spinner{
+    width: 80px;
+    height: 80px;
+    border: 8px solid rgb(208, 19, 214, 0.2);
+    border-radius: 50%;
+    border-top: 8px solid #01101a;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
 
 /*header*/
 .logo{
@@ -100,6 +128,7 @@ body {
     display: none;
     width: 11.5rem;
     height: 1.7rem;
+    background: #f9f5ff;
     border: none;
     border-radius: 20px 0px 0px 20px;
     margin-right: 0.8rem;
@@ -141,10 +170,21 @@ body {
     line-height: 28px;
 }
 
+/* buttons */
 .button{
     font-family: 'LightItalic';
     color: white;
     font-size: 0.9rem;
+    font-weight: 500;
+    --glow-color: var(--primaryColor);
+    --glow-spread-color: #dc3daa;
+    --enhanced-glow-color: #fcd0ee;
+    --btn-color: var(--primaryColor);
+    border: solid var(--primaryColor);
+    color: white;
+    border-radius: 20em;
+    outline: none;
+    transition: all 0.3s;
 }
 .btn-1{
     width: 10.44rem;
@@ -162,10 +202,29 @@ body {
     border: 2px solid var(--primaryColor);
     border-radius: 20px;
 }
-.button:hover{
-    box-shadow: 0px 0px 20px 0px var(--primaryColor);
-    transition: 500ms ease-in-out;
+.btn-2:hover{
+    background: var(--primaryColor);
 }
+   .button::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+   }
+   
+   .button:hover {
+    box-shadow: 0 0 1rem .25rem var(--glow-color);
+   }
+   
+   .button:active {
+    box-shadow: 0 0 0.6rem .25rem var(--glow-color);
+   }
+
+
 /*about text*/
 /*image*/
 .img-1 {
