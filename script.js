@@ -11,4 +11,5 @@ let loadrel = document.querySelector(".loaderelement");
 
 window.addEventListener("load", function(){
     loadrel.style.display = "none";
+    document.getElementById("main-body").style.display = "block";
 });
