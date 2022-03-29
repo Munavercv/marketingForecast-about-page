@@ -64,7 +64,7 @@ body{
 #main-body{
     display: none;
     background-image: linear-gradient(to bottom right, #200554, #3d065f 70%, #45108a);
-    height: 100vh;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -142,7 +142,7 @@ body{
     font-family: 'LightItalic';
 }
 .search-bar:focus{
-    border: var(--primaryColor);
+    outline: none;
 }
 .search-bar::placeholder{
     font-family: 'LightItalic';
@@ -234,12 +234,12 @@ body{
 /*about text*/
 /*image*/
 .img-div{
-    max-width: 100%;
+    max-width: 736px;
+    height: 40rem;
 }
 .img-1 {
     position: relative;
     margin-top: 1rem;
-    max-width: 736px;
 }
 /*image*/
 
